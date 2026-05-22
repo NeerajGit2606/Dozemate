@@ -1,0 +1,319 @@
+ 2025-09-10 16:26:54.943 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\server.js:36:3
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9 {"route":"/https://admin.dozemate.com/api/data/health/asd123?start=2025-09-09T10:43:30.555Z&end=2025-09-10T10:43:30.555Z","method":"GET","statusCode":404}
+2025-09-10 16:26:57.408 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\server.js:36:3
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9 {"route":"/https://admin.dozemate.com/api/data/health/asd123?start=2025-09-09T10:44:10.128Z&end=2025-09-10T10:44:10.128Z","method":"GET","statusCode":404}
+2025-09-10 16:26:57.646 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\server.js:36:3
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9 {"route":"/https://admin.dozemate.com//api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 16:27:11.352 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\server.js:36:3
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9 {"route":"/https://admin.dozemate.com/api/data/health/asd123?start=2025-09-10T10:52:11.344Z&end=2025-09-10T10:57:11.344Z","method":"GET","statusCode":404}
+2025-09-10 16:27:11.658 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\server.js:36:3
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9 {"route":"/https://admin.dozemate.com/api/data/health/asd123?start=2025-09-10T10:52:11.653Z&end=2025-09-10T10:57:11.653Z","method":"GET","statusCode":404}
+2025-09-10 16:27:12.581 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\server.js:36:3
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9 {"route":"/https://admin.dozemate.com/api/data/health/asd123?start=2025-09-10T10:52:12.568Z&end=2025-09-10T10:57:12.568Z","method":"GET","statusCode":404}
+2025-09-10 16:27:12.877 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\server.js:36:3
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9 {"route":"/https://admin.dozemate.com/api/data/health/asd123?start=2025-09-10T10:52:12.870Z&end=2025-09-10T10:57:12.870Z","method":"GET","statusCode":404}
+2025-09-10 16:27:14.990 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\server.js:36:3
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9 {"route":"/https://admin.dozemate.com/api/data/health/asd123?start=2025-09-10T10:52:14.984Z&end=2025-09-10T10:57:14.984Z","method":"GET","statusCode":404}
+2025-09-10 16:27:16.199 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\server.js:36:3
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9 {"route":"/https://admin.dozemate.com/api/data/health/asd123?start=2025-09-10T10:52:16.195Z&end=2025-09-10T10:57:16.195Z","method":"GET","statusCode":404}
+2025-09-10 16:27:19.375 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\server.js:36:3
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9 {"route":"/https://admin.dozemate.com//api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 16:27:20.414 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\server.js:36:3
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9 {"route":"/https://admin.dozemate.com/api/data/health/asd123?start=2025-09-10T10:52:20.410Z&end=2025-09-10T10:57:20.410Z","method":"GET","statusCode":404}
+2025-09-10 16:27:21.873 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\server.js:36:3
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9 {"route":"/https://admin.dozemate.com/api/data/health/asd123?start=2025-09-10T10:52:21.868Z&end=2025-09-10T10:57:21.868Z","method":"GET","statusCode":404}
+2025-09-10 16:27:30.339 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\server.js:36:3
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9 {"route":"/https://admin.dozemate.com//api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 20:48:06.350 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:646:15
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:47:12) {"route":"/api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 20:49:55.047 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:646:15
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:47:12) {"route":"/api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 20:50:08.136 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:646:15
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:47:12) {"route":"/api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 20:50:10.444 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:646:15
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:47:12) {"route":"/api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 20:50:10.538 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:646:15
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:47:12) {"route":"/api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 20:50:32.215 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:646:15
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:47:12) {"route":"/api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 20:56:23.602 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:646:15
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:47:12) {"route":"/api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 20:56:46.469 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:646:15
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:47:12) {"route":"/api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 20:56:48.690 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:646:15
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:47:12) {"route":"/api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 20:56:48.763 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:646:15
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:47:12) {"route":"/api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 20:56:56.591 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:646:15
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:47:12) {"route":"/api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 20:58:23.105 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:646:15
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:47:12) {"route":"/api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 20:58:23.197 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\server.js:36:3
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9 {"route":"/favicon.ico","method":"GET","statusCode":404}
+2025-09-10 20:59:15.794 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:646:15
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:47:12) {"route":"/api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 20:59:19.754 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:646:15
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:47:12) {"route":"/api/graph-settings","method":"GET","statusCode":404}
+2025-09-10 20:59:26.574 [error] Error: Route not found
+    at D:\Doze_web\dozemate-backend-main\server.js:62:15
+    at Layer.handle [as handle_request] (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:328:13)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:280:10)
+    at D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:646:15
+    at next (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\Doze_web\dozemate-backend-main\node_modules\express\lib\router\index.js:47:12) {"route":"/api/graph-settings","method":"GET","statusCode":404}

@@ -1,0 +1,220 @@
+/* Modern AboutUs.css */
+
+/* Page Layout */
+.aboutus-container {
+  padding: 24px !important;
+  margin-top: 100px !important;
+  color: #333;
+}
+
+.page-header {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+  color: #1e3a8a;
+  align-self: center;
+}
+
+.page-icon {
+  margin-right: 12px;
+  font-size: 32px !important;
+  color: #2563eb;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-weight: 400 !important;
+  max-width: 700px;
+  margin: 0 auto !important;
+}
+
+.section-divider {
+  width: 60%;
+  margin: 24px auto !important;
+  background-color: #e5e7eb !important;
+}
+
+/* Section Styling */
+.content-section {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+  padding: 24px !important;
+  margin-bottom: 36px !important;
+  transition: box-shadow 0.3s ease;
+}
+
+.content-section:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.section-title {
+  font-weight: 600 !important;
+  color: #1e3a8a !important;
+  margin-bottom: 16px !important;
+  display: flex;
+  align-items: center;
+}
+
+.section-icon {
+  margin-right: 8px;
+  color: #2563eb !important;
+  font-size: 1.5rem !important;
+}
+
+/* Feature Box Styling */
+.feature-grid {
+  margin-bottom: 36px !important;
+}
+
+.feature-box {
+  height: 100%;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+  padding: 24px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.icon-container {
+  background-color: #2563eb;
+  color: white;
+  padding: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover .icon-container {
+  transform: scale(1.1);
+}
+
+.feature-icon {
+  font-size: 2rem !important;
+}
+
+.feature-title {
+  font-weight: 600 !important;
+  color: #1e3a8a !important;
+  margin-bottom: 8px !important;
+}
+
+.feature-text {
+  color: #6b7280 !important;
+}
+
+/* List Styling */
+.approach-list {
+  padding-left: 32px !important;
+  margin-bottom: 16px !important;
+}
+
+.approach-list-item {
+  margin-bottom: 8px !important;
+  position: relative;
+}
+
+.approach-list-item:before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #2563eb;
+}
+
+/* Contact Section */
+.contact-section {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+  padding: 24px !important;
+  margin-bottom: 36px !important;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-section:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.contact-icon {
+  color: #2563eb !important;
+  margin-right: 8px !important;
+}
+
+.contact-button {
+  background: linear-gradient(90deg, #2563eb, #3b82f6) !important;
+  color: white !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  margin-top: 24px !important;
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.contact-button:hover {
+  background: linear-gradient(90deg, #1e40af, #2563eb) !important;
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4) !important;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+  .aboutus-container {
+    padding: 20px !important;
+  }
+  
+  .section-divider {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutus-container {
+    padding: 16px !important;
+  }
+  
+  .content-section,
+  .contact-section {
+    padding: 20px !important;
+  }
+  
+  .feature-box {
+    margin-bottom: 16px;
+  }
+  
+  .section-divider {
+    width: 90%;
+  }
+}

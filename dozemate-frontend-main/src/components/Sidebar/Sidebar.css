@@ -1,0 +1,96 @@
+/* If header is fixed, set its height here (e.g., 64px). Otherwise keep 0. */
+:root { --header-h: 0px; }
+
+html { scrollbar-gutter: stable both-edges; }
+
+/* ---- Overlay drawer (prevents dashboard shift) ---- */
+.app-sidebar {
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  height: calc(100vh - var(--header-h));
+  width: 260px;                 /* drawer width */
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+  transform: translateX(-100%); /* hidden off-canvas */
+  transition: transform .25s ease;
+  z-index: 1200;                /* above dashboard */
+  padding: 38px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.app-sidebar.open { transform: translateX(0); }
+
+/* Clickable dimmer behind sidebar */
+.app-overlay {
+  position: fixed;
+  inset: 0;
+  top: var(--header-h);
+  background: rgba(0,0,0,.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+  z-index: 1100;
+}
+.app-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* --- Keep overlay drawer rules you already added --- */
+/* … app-sidebar, app-overlay, etc. … */
+
+/* === Button / text styling (like earlier) === */
+.app-sidebar .MuiButton-root {
+  justify-content: flex-start;
+  padding: 10px 14px;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #5e6163;              /* blue text */
+  text-transform: none;        /* remove MUI uppercase */
+  letter-spacing: .2px;
+  border-radius: 10px;
+}
+
+.app-sidebar .MuiButton-root .icon {
+  font-size: 1.1rem;
+  min-width: 24px;
+  color: #5e6163;              /* icon same blue */
+}
+
+/* Hover/active like before */
+.app-sidebar .MuiButton-root:hover {
+  background: rgba(21, 101, 192, 0.08);
+}
+
+/* Logout (error) coloring */
+.app-sidebar .MuiButton-root.MuiButton-textError,
+.app-sidebar .MuiButton-root[color="error"] {
+  color: #d32f2f;
+}
+.app-sidebar .MuiButton-root.MuiButton-textError:hover,
+.app-sidebar .MuiButton-root[color="error"]:hover {
+  background: rgba(211, 47, 47, 0.08);
+}
+
+/* Section headers keep bold/centered */
+.app-sidebar .MuiTypography-root {
+  font-weight: 700 !important;
+  color: #1565c0;
+}
+
+/* Mobile: keep your previous behavior */
+@media (max-width: 768px) {
+  .app-sidebar { width: 80%; max-width: 300px; }
+  .app-sidebar .MuiButton-root {
+    justify-content: center;
+    min-height: 48px;
+  }
+  .app-sidebar .MuiButton-root span:not(.icon) { display: none !important; }
+  .app-sidebar .icon { font-size: 1.3rem; margin: 0; }
+  .app-sidebar .MuiTypography-root { display: none; }
+}
+
+.app-sidebar ul {
+  padding-top: 22%;   /* shifts the entire menu down */
+}

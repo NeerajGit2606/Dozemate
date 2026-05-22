@@ -1,0 +1,124 @@
+/* Header Base */
+.header-container {
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 8px 16px;
+    position: relative;
+}
+
+/* Logo Section */
+.header-logo-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    max-height: 50px;
+}
+
+/* Center Icons Section */
+.header-center-icons {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    margin: 0 0 0 0;
+}
+
+.icon-btn {
+    font-size: 2.8rem;
+    /* MUCH bigger icons */
+    padding: 12px;
+    /* Bigger padding */
+    min-width: 60px;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile Section */
+.header-profile {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.userImg img {
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .header-logo-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        height: 54%;
+    }
+
+    .header-container {
+        padding: 0;
+        /* Remove extra padding */
+        overflow: visible;
+    }
+
+    .header-logo {
+        width: auto;
+        object-fit: contain;
+    }
+
+    .header-inner {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 8px 12px;
+        background-color: #fff;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-center-icons {
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .icon-btn {
+        font-size: 2rem;
+        padding: 8px;
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    .header-profile {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        z-index: 10;
+    }
+
+    .userImg img {
+        height: 36px;
+        width: 36px;
+    }
+}
+

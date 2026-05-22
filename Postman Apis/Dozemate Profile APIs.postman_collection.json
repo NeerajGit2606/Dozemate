@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "127beff3-dded-484d-a6d1-5e69a9459ed5",
+		"name": "Dozemate Profile APIs",
+		"description": "Profile management flows: add, list, get, update, delete, avatar upload",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47089962",
+		"_collection_link": "https://orbital-module-administrator-76954575-3354821.postman.co/workspace/avik-tech's-Workspace~dabd62ff-4c81-4050-8a83-f3cc29778857/collection/47089962-127beff3-dded-484d-a6d1-5e69a9459ed5?action=share&source=collection_link&creator=47089962"
+	},
+	"item": [
+		{
+			"name": "Login (get token)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"YOUR_EMAIL\",\n  \"password\": \"YOUR_PASSWORD\",\n  \"role\": \"superadmin\"\n}"
+				},
+				"url": {
+					"raw": "https://admin.dozemate.com/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"admin",
+						"dozemate",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODUxNTdiOTVhZDVkOTkzMDMwYjMwY2MiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc1NzY5Mzc2OSwiZXhwIjoxNzYwMjg1NzY5fQ.mVSS1pRaD9B_zAtU-3rU5v6yKPjPKMFcbt62Mzt-GjQ"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Rahul\",\n  \"gender\": \"male\",\n  \"weight\": 70,\n  \"height\": 175,\n  \"nickname\": \"Rocks\"\n}"
+				},
+				"url": {
+					"raw": "https://admin.dozemate.com/api/account/66687/profiles",
+					"protocol": "https",
+					"host": [
+						"admin",
+						"dozemate",
+						"com"
+					],
+					"path": [
+						"api",
+						"account",
+						"66687",
+						"profiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Profiles (by Account)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODUxNTdiOTVhZDVkOTkzMDMwYjMwY2MiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc1NzY5Mzc2OSwiZXhwIjoxNzYwMjg1NzY5fQ.mVSS1pRaD9B_zAtU-3rU5v6yKPjPKMFcbt62Mzt-GjQ"
+					}
+				],
+				"url": {
+					"raw": "https://admin.dozemate.com/api/account/66687/profiles",
+					"protocol": "https",
+					"host": [
+						"admin",
+						"dozemate",
+						"com"
+					],
+					"path": [
+						"api",
+						"account",
+						"66687",
+						"profiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile (by userId)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODUxNTdiOTVhZDVkOTkzMDMwYjMwY2MiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc1NzY5Mzc2OSwiZXhwIjoxNzYwMjg1NzY5fQ.mVSS1pRaD9B_zAtU-3rU5v6yKPjPKMFcbt62Mzt-GjQ"
+					}
+				],
+				"url": {
+					"raw": "https://admin.dozemate.com/api/profiles/66687a",
+					"protocol": "https",
+					"host": [
+						"admin",
+						"dozemate",
+						"com"
+					],
+					"path": [
+						"api",
+						"profiles",
+						"66687a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODUxNTdiOTVhZDVkOTkzMDMwYjMwY2MiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc1NzY5Mzc2OSwiZXhwIjoxNzYwMjg1NzY5fQ.mVSS1pRaD9B_zAtU-3rU5v6yKPjPKMFcbt62Mzt-GjQ"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nickname\": \"Rocky\",\n  \"weight\": 72,\n  \"height\": 176\n}"
+				},
+				"url": {
+					"raw": "https://admin.dozemate.com/api/profiles/66687a",
+					"protocol": "https",
+					"host": [
+						"admin",
+						"dozemate",
+						"com"
+					],
+					"path": [
+						"api",
+						"profiles",
+						"66687a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Avatar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODUxNTdiOTVhZDVkOTkzMDMwYjMwY2MiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc1NzY5Mzc2OSwiZXhwIjoxNzYwMjg1NzY5fQ.mVSS1pRaD9B_zAtU-3rU5v6yKPjPKMFcbt62Mzt-GjQ"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"value": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://admin.dozemate.com/api/profiles/66687a/avatar",
+					"protocol": "https",
+					"host": [
+						"admin",
+						"dozemate",
+						"com"
+					],
+					"path": [
+						"api",
+						"profiles",
+						"66687a",
+						"avatar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Profile",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODUxNTdiOTVhZDVkOTkzMDMwYjMwY2MiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc1NzY5Mzc2OSwiZXhwIjoxNzYwMjg1NzY5fQ.mVSS1pRaD9B_zAtU-3rU5v6yKPjPKMFcbt62Mzt-GjQ"
+					}
+				],
+				"url": {
+					"raw": "https://admin.dozemate.com/api/profiles/66687a",
+					"protocol": "https",
+					"host": [
+						"admin",
+						"dozemate",
+						"com"
+					],
+					"path": [
+						"api",
+						"profiles",
+						"66687a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

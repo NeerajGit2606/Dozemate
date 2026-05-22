@@ -1,0 +1,21 @@
+@'
+# global
+*.log
+.env
+.DS_Store
+
+# Node
+**/node_modules/
+**/coverage/
+**/.parcel-cache/
+**/.next/
+**/.turbo/
+**/dist/
+**/build/
+
+# Frontend extras
+dozemate-frontend-main/frontend.zip
+'@ | Out-File -Encoding utf8 .gitattributes.tmp  # just to avoid CRLF noise
+Move-Item .gitattributes.tmp .gitignore -Force
+**/node_modules/
+**/build/

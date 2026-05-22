@@ -1,0 +1,30 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 60
+    },
+    "auditLog": "D:\\Doze_web\\dozemate-logs\\.ab05c15c320b5d80d45966f87ec8b00dbf94a947-audit.json",
+    "files": [
+        {
+            "date": 1757418050484,
+            "name": "D:\\Doze_web\\dozemate-logs\\error.log.2025-09-09",
+            "hash": "099d4c6a4c9067fd95d70570efeb81e41d7b2770a1bffb5dfcdbe6252b9a4282"
+        },
+        {
+            "date": 1757485086346,
+            "name": "D:\\Doze_web\\dozemate-logs\\error.log.2025-09-10",
+            "hash": "d51a376eed8d0b158a3345fa30f4d29135a9d9a2af0418ea723a493133d151e0"
+        },
+        {
+            "date": 1757564614874,
+            "name": "D:\\Doze_web\\dozemate-logs\\error.log.2025-09-11",
+            "hash": "21c14e1457eaafc62856a9ed5be512752b5f8ae75dcff3d5f373aed80c4fd35f"
+        },
+        {
+            "date": 1757655014702,
+            "name": "D:\\Doze_web\\dozemate-logs\\error.log.2025-09-12",
+            "hash": "2bfdb673633cdad55ed2b9625c2b2895d6ca111dfdf2aaa73fe5578d4552cab0"
+        }
+    ],
+    "hashType": "sha256"
+}

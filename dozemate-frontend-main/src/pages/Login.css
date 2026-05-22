@@ -1,0 +1,265 @@
+:root {
+  --primary: #6366f1;
+  --secondary: #4f46e5;
+  --accent: #a855f7;
+  --background: #f8fafc;
+  --text: #1e293b;
+}
+
+.content{
+  flex: 0 0 100% !important;
+  transition: all 0.3sease-in-out;
+  background: #f5f5f5 !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--background) 0%, #e2e8f0 100%);
+  padding: 2rem;
+}
+
+.auth-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 440px !important;
+  transform: translateY(0);
+  animation: cardEntry 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes cardEntry {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.app-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.logo-gradient {
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.role-select-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.role-select {
+  width: 100%;
+  padding: 0.875rem 2.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  appearance: none;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+  color: var(--text);
+}
+
+.role-select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  z-index: 2;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 0.875rem 2.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+  color: var(--text);
+}
+
+.input-container input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.login-button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-effect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.button-text {
+  position: relative;
+  z-index: 2;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.link-gradient {
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.link-gradient:hover {
+  opacity: 0.8;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+  
+  .logo-gradient {
+    font-size: 2.25rem;
+  }
+  
+  .login-container {
+    padding: 1rem;
+  }
+}
+
+.oauth-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.oauth-btn.google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 100%;
+  padding: 10px 16px;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: #3c4043;
+
+  background-color: #ffffff;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.oauth-btn.google:hover {
+  background-color: #f7f8f8;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+}
+
+.info-message {
+  background: #dcfce7;       /* light green */
+  color: #15803d;            /* dark green text */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  border: 1px solid #86efac; /* soft green border */
+}
+
+
+.forgot-password-link {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.forgot-password-link .link-gradient {
+  color: #2563eb;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.forgot-password-link .link-gradient:hover {
+  text-decoration: underline;
+}

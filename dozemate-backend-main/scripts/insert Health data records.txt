@@ -1,6 +1,6 @@
 
 // Select target database
-use("iot-health-db")
+use("dozemate")
 
 const deviceId = "0102-ACDE48112233"; // target device
 // Start from IST 17:33 (convert to UTC for Mongo)

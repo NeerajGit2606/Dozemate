@@ -20,7 +20,7 @@ const { verifySmtp } = require('./utils/mailer');
 const publicPendingRoutes = require("./routes/publicPending");
 const authRoutes = require("./routes/auth");
 const deviceRoutes = require("./routes/device");
-const { router: mqttRoutes, connectMQTT } = require("./routes/mqtt");
+// const { router: mqttRoutes, connectMQTT } = require("./routes/mqtt");
 const protectedRoutes = require("./routes/protectedRoutes");
 const userRoutes = require("./routes/userProfileRoutes");
 const organizationRoutes = require("./routes/organizationRoutes");
@@ -53,7 +53,7 @@ app.use("/uploads", express.static("uploads"));
 app.use("/api/public", publicPendingRoutes);
 app.use("/api/auth", authRoutes);            // ← keep only this one
 app.use("/api/devices", deviceRoutes);
-app.use("/api/mqtt", mqttRoutes);
+// app.use("/api/mqtt", mqttRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/organizations", organizationRoutes);
 app.use("/api/admins", adminRoutes);
@@ -106,7 +106,7 @@ connectDB()
     app.listen(PORT, () => logger.info(`✅ Server running on port ${PORT}`));
 
     // MQTT after server is up
-    connectMQTT();
+    // connectMQTT();
 
     // hourly device status updates
     cron.schedule("0 * * * *", async () => {

@@ -811,7 +811,7 @@ exports.googleCallback = async (req, res, next) => {
     next(err);
   }
 };
-
+ 
 // GET /api/auth/verify/:token
 exports.verifyEmail = async (req, res, next) => {
   try {

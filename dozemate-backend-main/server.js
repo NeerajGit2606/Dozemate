@@ -49,6 +49,10 @@ app.use("/uploads", express.static("uploads"));
 /* ───────────────────────── Routes ───────────────────────── */
 // mount PUBLIC routes before protected if they share /api prefix
 
+// Health check
+app.get("/", (req, res) => {
+  res.json({ status: "ok", message: "Dozemate API is running 🚀" });
+});
 
 app.use("/api/public", publicPendingRoutes);
 app.use("/api/auth", authRoutes);            // ← keep only this one
@@ -66,6 +70,7 @@ app.use("/api", profileRoutes);
 app.use("/api/graph-settings", require("./routes/graphSettings"));
 app.use("/api/device-prefixes", devicePrefixesRouter);
 app.use("/api", protectedRoutes);
+
 
 /* 404 */
 app.use((req, res) => {

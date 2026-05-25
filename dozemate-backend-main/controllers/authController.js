@@ -22,9 +22,9 @@ const elog = (...a) => console.error('[AUTH:ERR]', ...a);
 const mask = (s) => (s ? `${String(s).slice(0, 2)}*** (${String(s).length} chars)` : 'nil');
 
 const gClient = new OAuth2Client({
-  clientId: process.env.OAUTH_GOOGLE_CLIENT_ID,
-  clientSecret: process.env.OAUTH_GOOGLE_CLIENT_SECRET,
-  redirectUri: process.env.OAUTH_GOOGLE_REDIRECT_URI,
+  clientId: process.env.GOOGLE_CLIENT_ID,
+  clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+  redirectUri: process.env.GOOGLE_REDIRECT_URI,
 });
 
 function generateTempPassword() {
@@ -748,7 +748,7 @@ exports.googleCallback = async (req, res, next) => {
 
     const ticket = await gClient.verifyIdToken({
       idToken: tokens.id_token,
-      audience: process.env.OAUTH_GOOGLE_CLIENT_ID,
+      audience: process.env.GOOGLE_CLIENT_ID,
     });
     const p = ticket.getPayload(); // {sub, email, name, picture}
 

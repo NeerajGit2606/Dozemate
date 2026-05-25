@@ -1,3 +1,4 @@
+import { API_BASE } from "../../config/api";
 import React, { useContext, useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import logoLight from '../../assets/images/logo.png';
@@ -192,3 +193,5 @@ const Header = () => {
 };
 
 export default Header;
+
+

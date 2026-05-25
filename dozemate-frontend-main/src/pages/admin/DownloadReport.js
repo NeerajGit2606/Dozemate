@@ -1,3 +1,4 @@
+import { API_BASE } from "../../config/api";
 import React, { useState, useEffect } from 'react';
 import { useContext } from 'react';
 import { MyContext } from '../../App';
@@ -891,3 +892,5 @@ const DownloadReport = () => {
 };
 
 export default DownloadReport;
+
+

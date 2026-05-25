@@ -1,3 +1,4 @@
+import { API_BASE } from "../../config/api";
 import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Dialog, DialogContent, DialogTitle, IconButton } from '@mui/material';
@@ -976,3 +977,5 @@ const fetchUserDevice = async (userEmail) => {
 };
 
 export default AdminHistory;
+
+

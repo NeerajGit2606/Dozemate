@@ -1,3 +1,4 @@
+import { API_BASE } from "../config/api";
 // Database mode for fetching historical data and continuous polling
 
 
@@ -287,3 +288,4 @@ export const setupDatabaseMode = (setData, setChartData, chartRef, isAutoScrolli
 };
 
 export default setupDatabaseMode;
+

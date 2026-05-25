@@ -17,7 +17,7 @@ router.get("/verify/:token", authController.verifyEmail);
 router.get("/google", authController.googleAuth);
 router.get("/google/callback", authController.googleCallback);
 
-+router.post("/forgot", authController.forgotPassword);
-+router.post("/reset/:token", authController.resetPassword);
+router.post("/forgot", authController.forgotPassword);
+router.post("/reset/:token", authController.resetPassword);
 
 module.exports = router;

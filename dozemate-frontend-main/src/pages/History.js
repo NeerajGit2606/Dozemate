@@ -1,3 +1,4 @@
+import { API_BASE } from "../config/api";
 import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart } from 'chart.js';
@@ -1074,3 +1075,4 @@ const History = () => {
 };
 
 export default History;
+

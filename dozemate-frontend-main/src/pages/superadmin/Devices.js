@@ -1,3 +1,4 @@
+import { API_BASE } from "../../config/api";
 import React, { useState, useEffect, useRef } from 'react';
 import {
   Box, Typography, Button, TextField, Dialog, DialogTitle,
@@ -1053,3 +1054,4 @@ const Devices = () => {
 };
 
 export default Devices;
+

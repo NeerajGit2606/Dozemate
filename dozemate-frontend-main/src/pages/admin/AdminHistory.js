@@ -609,7 +609,7 @@ const AdminHistory = () => {
   // Function to fetch admin's organization
   const fetchAdminOrganization = async () => {
     try {
-      const response = await fetch('https://admin.dozemate.com/api/user/user/organization-id', {
+      const response = await fetch('${API_BASE}/api/user/user/organization-id', {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -636,7 +636,7 @@ const AdminHistory = () => {
   // Function to fetch organization name
   const fetchOrganizationName = async (orgId) => {
     try {
-      const response = await fetch('https://admin.dozemate.com/api/organizations', {
+      const response = await fetch('${API_BASE}/api/organizations', {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -660,7 +660,7 @@ const AdminHistory = () => {
     if (!organizationId) return;
     setUsersLoading(true);
     try {
-      const response = await fetch(`https://admin.dozemate.com/api/manage/users/organization/${organizationId}?page=1&limit=1000`, {
+      const response = await fetch(`${API_BASE}/api/manage/users/organization/${organizationId}?page=1&limit=1000`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -701,7 +701,7 @@ const AdminHistory = () => {
 // Function to fetch user's device when user is selected
 const fetchUserDevice = async (userEmail) => {
   try {
-    const response = await fetch(`https://admin.dozemate.com/api/devices/active-device/${userEmail}`, {
+    const response = await fetch(`${API_BASE}/api/devices/active-device/${userEmail}`, {
       headers: { Authorization: `Bearer ${token}` }
     });
     
@@ -762,7 +762,7 @@ const fetchUserDevice = async (userEmail) => {
     setError(null);
     
     try {
-      const response = await fetch(`https://admin.dozemate.com/api/data/history/${deviceId}?period=${period}`, {
+      const response = await fetch(`${API_BASE}/api/data/history/${deviceId}?period=${period}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       

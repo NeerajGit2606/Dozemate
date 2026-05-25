@@ -527,7 +527,7 @@ const Devices = () => {
       });
 
       // Use search endpoint if searching, otherwise get all
-      let url = `https://admin.dozemate.com/api/manage/devices`;
+      let url = `${API_BASE}/api/manage/devices`;
       if (searchQuery) {
         url += `/search?q=${encodeURIComponent(searchQuery)}`;
       } else {

@@ -65,7 +65,7 @@ const UserProfile = () => {
   const imgSrc = previewImage || (profile?.profileImage
     ? (profile.profileImage.startsWith('http')
       ? profile.profileImage
-      : `https://admin.dozemate.com${profile.profileImage}`)
+      : `${API_BASE}${profile.profileImage}`)
     : undefined);
 
   const fetchUserProfile = useCallback(async () => {

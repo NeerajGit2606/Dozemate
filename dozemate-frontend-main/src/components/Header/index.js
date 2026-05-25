@@ -46,7 +46,7 @@ const Header = () => {
 
       try {
         // Use your actual profile endpoint:
-        const res = await fetch('https://admin.dozemate.com/api/auth/me', {
+        const res = await fetch('${API_BASE}/api/auth/me', {
           headers: { Authorization: `Bearer ${token}` }
         });
         const json = await res.json();
@@ -75,7 +75,7 @@ const Header = () => {
     const img = userData?.profileImage || userData?.avatar || userData?.photoUrl;
     if (!img) return null;
     if (/^https?:\/\//i.test(img)) return img;
-    return `https://admin.dozemate.com${img}`;
+    return `${API_BASE}${img}`;
   };
 
   return (

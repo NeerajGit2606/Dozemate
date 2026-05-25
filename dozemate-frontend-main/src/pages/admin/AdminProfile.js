@@ -293,7 +293,7 @@ const AdminProfile = () => {
           <Grid container spacing={2} alignItems="center">
             <Grid item>
               <Avatar 
-                src={previewImage || (profile.profileImage && `https://admin.dozemate.com${profile.profileImage}`)} 
+                src={previewImage || (profile.profileImage && `${API_BASE}${profile.profileImage}`)} 
                 alt={profile.name} 
                 sx={{ width: 100, height: 100 }}
               />

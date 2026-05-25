@@ -6,7 +6,7 @@ const isLocal =
 export const API_BASE =
   // allow override via env if you ever need it
   (process.env.REACT_APP_API_BASE || "").trim() ||
-  (isLocal ? "http://localhost:5000" : "https://admin.dozemate.com");
+  (isLocal ? "http://localhost:5000" : "https://dozemate.onrender.com");
 
 // Join base + path safely
 export const apiUrl = (path) => {

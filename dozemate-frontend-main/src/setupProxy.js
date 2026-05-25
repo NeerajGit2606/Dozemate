@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://admin.dozemate.com',
+      target: '${API_BASE}',
       changeOrigin: true,
       secure: true,
     })

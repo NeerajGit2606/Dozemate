@@ -693,7 +693,7 @@ const History = () => {
           return;
         }
 
-        const response = await fetch("https://admin.dozemate.com/api/devices/user", {
+        const response = await fetch("https://dozemate.onrender.com/api/devices/user", {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -771,7 +771,7 @@ const History = () => {
         return;
       }
 
-      const response = await fetch(`https://admin.dozemate.com/api/data/history/${deviceId}?period=${period}`, {
+      const response = await fetch(`${API_BASE}/api/data/history/${deviceId}?period=${period}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 

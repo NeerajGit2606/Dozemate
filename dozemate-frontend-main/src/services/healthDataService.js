@@ -88,7 +88,7 @@ export const fetchHealthData = async (
   const utcStart = new Date(utcEnd.getTime() - rangeMinutes * 60 * 1000);
 
   const id = encodeURIComponent(deviceId);
-  const historyUrl = `https://admin.dozemate.com/api/devices/history?deviceId=${id}&from=${utcStart.toISOString()}&to=${utcEnd.toISOString()}&limit=500`;
+  const historyUrl = `${API_BASE}/api/devices/history?deviceId=${id}&from=${utcStart.toISOString()}&to=${utcEnd.toISOString()}&limit=500`;
 
   console.log("📡 HealthData fetch (UTC window):", { start: utcStart, end: utcEnd, deviceId });
 

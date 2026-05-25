@@ -19,7 +19,7 @@ export const setupDatabaseMode = (setData, setChartData, chartRef, isAutoScrolli
         return null;
       }
 
-      const userResponse = await fetch("https://admin.dozemate.com/api/devices/user", {
+      const userResponse = await fetch("https://dozemate.onrender.com/api/devices/user", {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -83,7 +83,7 @@ export const setupDatabaseMode = (setData, setChartData, chartRef, isAutoScrolli
       console.log(`Polling data for device ${deviceId} from ${startDate.toISOString()} to ${endDate.toISOString()}`);
 
       const healthResponse = await fetch(apiUrl(
-        `https://admin.dozemate.com/api/data/health/${deviceId}?start=${startDate.toISOString()}&end=${endDate.toISOString()}`),
+        `${API_BASE}/api/data/health/${deviceId}?start=${startDate.toISOString()}&end=${endDate.toISOString()}`),
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -121,7 +121,7 @@ export const setupDatabaseMode = (setData, setChartData, chartRef, isAutoScrolli
       const startDate = new Date(endDate - 24 * 60 * 60 * 1000); // 24 hours ago
 
       const initialResponse = await fetch(apiUrl(
-        `https://admin.dozemate.com/api/data/health/${deviceId}?start=${startDate.toISOString()}&end=${endDate.toISOString()}`),
+        `${API_BASE}/api/data/health/${deviceId}?start=${startDate.toISOString()}&end=${endDate.toISOString()}`),
         {
           headers: { Authorization: `Bearer ${token}` }
         }

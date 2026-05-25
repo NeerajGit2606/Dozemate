@@ -15,7 +15,7 @@ export const setupMqttMode = (setData, setChartData, chartRef, isAutoScrolling) 
         return null;
       }
       
-      const response = await fetch("https://admin.dozemate.com/api/devices/user", {
+      const response = await fetch("https://dozemate.onrender.com/api/devices/user", {
         headers: {
           Authorization: `Bearer ${token}`
         }

@@ -144,7 +144,7 @@ const SuperAdminDashboard = () => {
         const token = localStorage.getItem("token");
 
         // Fetch all organizations
-        const orgRes = await fetch("https://admin.dozemate.com/api/organizations?limit=100", {
+        const orgRes = await fetch("https://dozemate.onrender.com/api/organizations?limit=100", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const orgData = await orgRes.json();
@@ -191,7 +191,7 @@ const SuperAdminDashboard = () => {
         for (const org of orgsToFetch) {
           try {
             const usersRes = await fetch(
-              `https://admin.dozemate.com/api/manage/users/organization/${org._id}`,
+              `${API_BASE}/api/manage/users/organization/${org._id}`,
               { headers: { Authorization: `Bearer ${token}` } }
             );
             const usersData = await usersRes.json();
@@ -229,7 +229,7 @@ const SuperAdminDashboard = () => {
       for (const user of allUsers) {
         try {
           const res = await fetch(
-            `https://admin.dozemate.com/api/manage/users/${user._id}`,
+            `${API_BASE}/api/manage/users/${user._id}`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
           const data = await res.json();
@@ -272,7 +272,7 @@ const SuperAdminDashboard = () => {
           const endDate = new Date();
           const startDate = new Date(endDate - 5 * 60 * 1000);
           const healthRes = await fetch(
-            `https://admin.dozemate.com/api/data/health/${device.deviceId}?start=${startDate.toISOString()}&end=${endDate.toISOString()}`,
+            `${API_BASE}/api/data/health/${device.deviceId}?start=${startDate.toISOString()}&end=${endDate.toISOString()}`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
           const healthData = await healthRes.json();

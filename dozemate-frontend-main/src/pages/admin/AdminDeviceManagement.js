@@ -80,7 +80,7 @@ const AdminDeviceManagement = () => {
   // Function to fetch admin's organization
   const fetchAdminOrganization = async () => {
     try {
-      const response = await fetch('https://admin.dozemate.com/api/user/user/organization-id', {
+      const response = await fetch('${API_BASE}/api/user/user/organization-id', {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -107,7 +107,7 @@ const AdminDeviceManagement = () => {
   // Function to fetch organization name
   const fetchOrganizationName = async (orgId) => {
     try {
-      const response = await fetch('https://admin.dozemate.com/api/organizations', {
+      const response = await fetch('${API_BASE}/api/organizations', {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -132,7 +132,7 @@ const AdminDeviceManagement = () => {
     setLoading(true);
     try {
       // Use the new admin-specific API endpoint
-      let url = `https://admin.dozemate.com/api/devices/devices/organization/${organizationId}`;
+      let url = `${API_BASE}/api/devices/devices/organization/${organizationId}`;
       
       // Build query parameters
       const queryParams = new URLSearchParams({
@@ -247,7 +247,7 @@ const AdminDeviceManagement = () => {
     setFormLoading(true);
 
     try {
-      const response = await fetch(`https://admin.dozemate.com/api/manage/devices/${selectedDeviceId}`, {
+      const response = await fetch(`${API_BASE}/api/manage/devices/${selectedDeviceId}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -277,7 +277,7 @@ const AdminDeviceManagement = () => {
   // Function to handle confirm delete (DELETE /api/manage/devices/:id)
   const handleConfirmDelete = async () => {
     try {
-      const response = await fetch(`https://admin.dozemate.com/api/manage/devices/${selectedDeviceId}`, {
+      const response = await fetch(`${API_BASE}/api/manage/devices/${selectedDeviceId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,

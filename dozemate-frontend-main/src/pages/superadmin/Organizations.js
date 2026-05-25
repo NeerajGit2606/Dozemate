@@ -243,7 +243,7 @@ const Organizations = () => {
         console.log('Creating organization with data:', formData); // Debugging
 
         // Create new organization
-        const response = await fetch('https://admin.dozemate.com/api/organizations', {
+        const response = await fetch('${API_BASE}/api/organizations', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${token}`,

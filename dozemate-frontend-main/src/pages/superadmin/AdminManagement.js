@@ -128,7 +128,7 @@ const AdminManagement = () => {
       }
   
       // Fetch admins using the correct API endpoint
-      const response = await fetch(`https://admin.dozemate.com/api/admins?${queryParams}`, {
+      const response = await fetch(`${API_BASE}/api/admins?${queryParams}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -162,7 +162,7 @@ const AdminManagement = () => {
     setLoadingOrgs(true);
     
     try {
-      const response = await fetch('https://admin.dozemate.com/api/organizations?limit=100', {
+      const response = await fetch('${API_BASE}/api/organizations?limit=100', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -308,7 +308,7 @@ const AdminManagement = () => {
     setResetPasswordLoading(true);
 
     try {
-      const response = await fetch(`https://admin.dozemate.com/api/admins/${selectedAdminId}`, {
+      const response = await fetch(`${API_BASE}/api/admins/${selectedAdminId}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -416,7 +416,7 @@ const AdminManagement = () => {
       
       if (dialogMode === 'add') {
         // Create new admin using the admin-specific endpoint
-        const response = await fetch('https://admin.dozemate.com/api/admins', {
+        const response = await fetch('${API_BASE}/api/admins', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -436,7 +436,7 @@ const AdminManagement = () => {
         fetchAdmins();
       } else if (dialogMode === 'edit') {
         // Update admin using admin-specific endpoint
-        const response = await fetch(`https://admin.dozemate.com/api/admins/${selectedAdminId}`, {
+        const response = await fetch(`${API_BASE}/api/admins/${selectedAdminId}`, {
           method: 'PUT',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -467,7 +467,7 @@ const AdminManagement = () => {
   const handleConfirmDelete = async () => {
     try {
       // Updated to use admin-specific endpoint
-      const response = await fetch(`https://admin.dozemate.com/api/admins/${selectedAdminId}`, {
+      const response = await fetch(`${API_BASE}/api/admins/${selectedAdminId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,

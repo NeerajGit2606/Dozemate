@@ -119,7 +119,7 @@ const AdminUserManagement = () => {
   // Function to fetch admin's organization
   const fetchAdminOrganization = async () => {
     try {
-      const response = await fetch('https://admin.dozemate.com/api/user/user/organization-id', {
+      const response = await fetch('${API_BASE}/api/user/user/organization-id', {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -145,7 +145,7 @@ const AdminUserManagement = () => {
   // Function to fetch organization name
   const fetchOrganizationName = async (orgId) => {
     try {
-      const response = await fetch('https://admin.dozemate.com/api/organizations', {
+      const response = await fetch('${API_BASE}/api/organizations', {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -169,7 +169,7 @@ const AdminUserManagement = () => {
     if (!organizationId) return;
     setLoading(true);
     try {
-      const url = `https://admin.dozemate.com/api/manage/users/organization/${organizationId}?page=${page + 1}&limit=${limit}`;
+      const url = `${API_BASE}/api/manage/users/organization/${organizationId}?page=${page + 1}&limit=${limit}`;
       const response = await fetch(url, {
         method: 'GET',
         headers: {
@@ -399,7 +399,7 @@ const AdminUserManagement = () => {
       };
       delete dataToSend.confirmPassword;
       
-      const response = await fetch('https://admin.dozemate.com/api/manage/users', {
+      const response = await fetch('${API_BASE}/api/manage/users', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -436,7 +436,7 @@ const AdminUserManagement = () => {
         organizationId: organizationId, // Ensure organization doesn't change
       };
       
-      const response = await fetch(`https://admin.dozemate.com/api/manage/users/${userToEdit._id}`, {
+      const response = await fetch(`${API_BASE}/api/manage/users/${userToEdit._id}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -473,7 +473,7 @@ const AdminUserManagement = () => {
         password: passwordData.password,
       };
       
-      const response = await fetch(`https://admin.dozemate.com/api/manage/users/${userToChangePassword._id}`, {
+      const response = await fetch(`${API_BASE}/api/manage/users/${userToChangePassword._id}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -504,7 +504,7 @@ const AdminUserManagement = () => {
     
     setFormLoading(true);
     try {
-      const response = await fetch(`https://admin.dozemate.com/api/manage/users/${userToDelete._id}`, {
+      const response = await fetch(`${API_BASE}/api/manage/users/${userToDelete._id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,

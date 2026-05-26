@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: '${API_BASE}',
+      target: 'apiUrl(',
       changeOrigin: true,
       secure: true,
     })

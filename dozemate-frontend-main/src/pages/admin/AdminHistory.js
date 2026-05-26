@@ -1,11 +1,10 @@
-import { API_BASE } from "../../config/api";
+import { apiUrl } from "../../config/api";
 import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Dialog, DialogContent, DialogTitle, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { useContext } from 'react';
 import { MyContext } from '../../App';
-
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -610,7 +609,7 @@ const AdminHistory = () => {
   // Function to fetch admin's organization
   const fetchAdminOrganization = async () => {
     try {
-      const response = await fetch('${API_BASE}/api/user/user/organization-id', {
+      const response = await fetch(apiUrl('api/user/user/organization-id'), {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -637,7 +636,7 @@ const AdminHistory = () => {
   // Function to fetch organization name
   const fetchOrganizationName = async (orgId) => {
     try {
-      const response = await fetch('${API_BASE}/api/organizations', {
+      const response = await fetch(apiUrl('api/organizations'), {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -661,7 +660,7 @@ const AdminHistory = () => {
     if (!organizationId) return;
     setUsersLoading(true);
     try {
-      const response = await fetch(`${API_BASE}/api/manage/users/organization/${organizationId}?page=1&limit=1000`, {
+      const response = await fetch(apiUrl(`/api/manage/users/organization/${organizationId}?page=1&limit=1000`), {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -702,7 +701,7 @@ const AdminHistory = () => {
 // Function to fetch user's device when user is selected
 const fetchUserDevice = async (userEmail) => {
   try {
-    const response = await fetch(`${API_BASE}/api/devices/active-device/${userEmail}`, {
+    const response = await fetch(apiUrl(`/api/devices/active-device/${userEmail}`), {
       headers: { Authorization: `Bearer ${token}` }
     });
     
@@ -763,7 +762,7 @@ const fetchUserDevice = async (userEmail) => {
     setError(null);
     
     try {
-      const response = await fetch(`${API_BASE}/api/data/history/${deviceId}?period=${period}`, {
+      const response = await fetch(apiUrl(`/api/data/history/${deviceId}?period=${period}`), {
         headers: { Authorization: `Bearer ${token}` }
       });
       
@@ -977,5 +976,6 @@ const fetchUserDevice = async (userEmail) => {
 };
 
 export default AdminHistory;
+
 
 

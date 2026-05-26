@@ -1,4 +1,4 @@
-import { API_BASE } from "../../config/api";
+import { apiUrl } from "../../config/api";
 import React, { useState, useEffect, useRef } from 'react';
 import {
   Box, Typography, Button, TextField, Dialog, DialogTitle,
@@ -21,7 +21,6 @@ import {
 } from '@mui/icons-material';
 import { useAuth } from '../../contexts/AuthContext';
 import './Devices.css';
-import { apiUrl } from "../../config/api"
 
 // ============== SOLUTION: Step 1 - Define Components Outside ==============
 
@@ -479,7 +478,7 @@ const Devices = () => {
 
     setAddDeviceFetching(true);
     try {
-      const res = await fetch(apiUrl(`/api/devices/details/${encodeURIComponent(id)}`), {
+      const res = await fetch(apiUrl('/api/devices/details/${encodeURIComponent(id)}'), {
         headers: { Authorization: `Bearer ${token}` }
       });
       const json = await res.json();
@@ -528,7 +527,7 @@ const Devices = () => {
       });
 
       // Use search endpoint if searching, otherwise get all
-      let url = `${API_BASE}/api/manage/devices`;
+      let url = `apiUrl(/api/manage/devices`;
       if (searchQuery) {
         url += `/search?q=${encodeURIComponent(searchQuery)}`;
       } else {
@@ -724,7 +723,7 @@ const Devices = () => {
     setFormLoading(true);
 
     try {
-      const response = await fetch(apiUrl(`/api/manage/devices/${selectedDeviceId}`), {
+      const response = await fetch(apiUrl('/api/manage/devices/${selectedDeviceId}'), {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -751,7 +750,7 @@ const Devices = () => {
   // Function to handle confirm delete (DELETE /api/manage/devices/:id)
   const handleConfirmDelete = async () => {
     try {
-      const response = await fetch(apiUrl(`/api/manage/devices/${selectedDeviceId}`), {
+      const response = await fetch(apiUrl('/api/manage/devices/${selectedDeviceId}'), {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -1054,4 +1053,5 @@ const Devices = () => {
 };
 
 export default Devices;
+
 

@@ -1,4 +1,4 @@
-import { API_BASE } from "../../config/api";
+import { apiUrl } from '../../config/api';
 import React, { useContext, useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import logoLight from '../../assets/images/logo.png';
@@ -47,7 +47,7 @@ const Header = () => {
 
       try {
         // Use your actual profile endpoint:
-        const res = await fetch('${API_BASE}/api/auth/me', {
+        const res = await fetch(apiUrl('api/auth/me'), {
           headers: { Authorization: `Bearer ${token}` }
         });
         const json = await res.json();
@@ -76,7 +76,7 @@ const Header = () => {
     const img = userData?.profileImage || userData?.avatar || userData?.photoUrl;
     if (!img) return null;
     if (/^https?:\/\//i.test(img)) return img;
-    return `${API_BASE}${img}`;
+    return `apiUrl(${img}`;
   };
 
   return (

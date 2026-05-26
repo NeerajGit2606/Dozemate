@@ -108,7 +108,7 @@ const AddDevice = () => {
         try {
             const token = localStorage.getItem("token");
             const id = deviceId.trim().toUpperCase();
-            const response = await fetch(apiUrl(`/api/devices/details/${id}`), {
+            const response = await fetch(apiUrl('/api/devices/details/${id}'), {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await response.json();

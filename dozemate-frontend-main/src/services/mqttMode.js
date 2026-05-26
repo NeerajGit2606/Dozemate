@@ -146,3 +146,4 @@ export const setupMqttMode = (setData, setChartData, chartRef, isAutoScrolling) 
 
   return setupMqtt();
 };
+

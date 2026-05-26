@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { apiUrl } from "../../config/api";
 import { useNavigate } from 'react-router-dom'; // Add this import
 import {
   Container,
@@ -76,7 +77,7 @@ const AdminProfile = () => {
   const fetchUserProfile = async () => {
     setLoading(true);
     try {
-      const response = await fetch('${API_BASE}/user/profile', {
+      const response = await fetch(apiUrl('user/profile'), {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -110,7 +111,7 @@ const AdminProfile = () => {
 
   const fetchOrganizationName = async (orgId) => {
     try {
-      const response = await fetch('${API_BASE}/organizations', {
+      const response = await fetch(apiUrl('organizations'), {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -169,7 +170,7 @@ const AdminProfile = () => {
     formDataImage.append('profileImage', image);
 
     try {
-      const response = await fetch('${API_BASE}/user/profile/image', {
+      const response = await fetch(apiUrl('user/profile/image'), {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`
@@ -194,7 +195,7 @@ const AdminProfile = () => {
 
   const saveProfile = async () => {
     try {
-      const response = await fetch('${API_BASE}/user/profile', {
+      const response = await fetch(apiUrl('user/profile'), {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -219,7 +220,7 @@ const AdminProfile = () => {
 
   const deleteAccount = async () => {
     try {
-      const response = await fetch('${API_BASE}/user/profile', {
+      const response = await fetch(apiUrl('user/profile'), {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`
@@ -293,7 +294,7 @@ const AdminProfile = () => {
           <Grid container spacing={2} alignItems="center">
             <Grid item>
               <Avatar 
-                src={previewImage || (profile.profileImage && `${API_BASE}${profile.profileImage}`)} 
+                src={previewImage || (profile.profileImage && `apiUrl(${profile.profileImage}`)} 
                 alt={profile.name} 
                 sx={{ width: 100, height: 100 }}
               />
@@ -567,3 +568,4 @@ const AdminProfile = () => {
 };
 
 export default AdminProfile;
+

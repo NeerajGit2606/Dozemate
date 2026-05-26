@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { OutlinedInput } from '@mui/material';
 import { useAuth } from '../contexts/AuthContext';
-
+import { apiUrl } from  '../config/api';
 import {
   Container,
   Paper,
@@ -65,7 +65,7 @@ const UserProfile = () => {
   const imgSrc = previewImage || (profile?.profileImage
     ? (profile.profileImage.startsWith('http')
       ? profile.profileImage
-      : `${API_BASE}${profile.profileImage}`)
+      : `apiUrl(${profile.profileImage}`)
     : undefined);
 
   const fetchUserProfile = useCallback(async () => {
@@ -74,7 +74,7 @@ const UserProfile = () => {
 
     setLoading(true);
     try {
-      const response = await fetch(`${API_BASE}/user/profile`, {
+      const response = await fetch(apiUrl(`/user/profile`), {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
       });
 
@@ -185,7 +185,7 @@ const UserProfile = () => {
           const fd = new FormData();
           fd.append(field, image);
           try {
-            const res = await fetch(`${API_BASE}${ep}`, {
+            const res = await fetch(apiUrl(`${ep}`), {
               method,
               headers: { Authorization: `Bearer ${token}` },
               body: fd,
@@ -225,7 +225,7 @@ const UserProfile = () => {
         { profileImageBase64: dataUrl },
       ];
       for (const payload of payloadCandidates) {
-        const res = await fetch(`${API_BASE}/user/profile`, {
+        const res = await fetch(apiUrl(`/user/profile`), {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -327,7 +327,7 @@ const UserProfile = () => {
 
   const deleteAccount = async () => {
     try {
-      const response = await fetch(`${API_BASE}/user/profile`, {
+      const response = await fetch(apiUrl(`/user/profile`), {
         method: "DELETE",
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
       });

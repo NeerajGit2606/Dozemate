@@ -1,4 +1,4 @@
-import { API_BASE } from "../config/api";
+import { apiUrl } from "../config/api";
 import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart } from 'chart.js';
@@ -772,7 +772,7 @@ const History = () => {
         return;
       }
 
-      const response = await fetch(`${API_BASE}/api/data/history/${deviceId}?period=${period}`, {
+      const response = await fetch(apiUrl(`/api/data/history/${deviceId}?period=${period}`), {
         headers: { Authorization: `Bearer ${token}` }
       });
 

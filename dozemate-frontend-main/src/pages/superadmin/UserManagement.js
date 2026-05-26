@@ -1,4 +1,4 @@
-import { API_BASE } from "../../config/api";
+import { apiUrl } from  '../../config/api';
 import React, { useState, useEffect } from 'react';
 import {
   Box,
@@ -175,7 +175,7 @@ const handleUnitChange = (field, newUnit) => {
   const fetchOrganizations = async () => {
     setLoadingOrgs(true);
     try {
-      const response = await fetch('${API_BASE}/api/organizations', {
+      const response = await fetch(apiUrl('api/organizations'), {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -205,7 +205,7 @@ const handleUnitChange = (field, newUnit) => {
     if (!selectedOrganization) return;
     setLoading(true);
     try {
-      let url = '${API_BASE}/api/manage/users';
+      let url = apiUrl('api/manage/users');
       if (selectedOrganization === 'individual') {
         url += '?organizationId=null';
       } else if (selectedOrganization !== 'all') {
@@ -402,7 +402,7 @@ const handleUnitChange = (field, newUnit) => {
     try {
       let deviceObjectIds = [];
       if (formData.deviceId) {
-        const deviceRes = await fetch(`${API_BASE}/api/manage/devices/search?q=${formData.deviceId}`, {
+        const deviceRes = await fetch(apiUrl(`/api/manage/devices/search?q=${formData.deviceId}`), {
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',
@@ -437,7 +437,7 @@ const handleUnitChange = (field, newUnit) => {
       }
 
       console.log("Data to send:", dataToSend);  // Confirm it has _id(s)
-      const response = await fetch('${API_BASE}/api/manage/users', {
+      const response = await fetch(apiUrl('api/manage/users'), {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -1192,7 +1192,7 @@ const handleUnitChange = (field, newUnit) => {
                       setIsValidDeviceId(true);
 
                       try {
-                        const response = await fetch(`${API_BASE}/api/manage/devices/search?q=${encodeURIComponent(value)}`, {
+                        const response = await fetch(apiUrl(`/api/manage/devices/search?q=${encodeURIComponent(value)}`), {
                           method: 'GET',
                           headers: {
                             Authorization: `Bearer ${token}`,
@@ -1354,5 +1354,6 @@ const handleUnitChange = (field, newUnit) => {
 };
 
 export default UserManagement;
+
 
 

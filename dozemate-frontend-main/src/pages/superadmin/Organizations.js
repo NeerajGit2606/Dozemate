@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { apiUrl } from "../../config/api";
 import {
   Box, Typography, Button, TextField, Dialog, DialogTitle,
   DialogContent, DialogActions, Paper, Table, TableBody,
@@ -17,7 +18,6 @@ import {
 } from '@mui/icons-material';
 import { useAuth } from '../../contexts/AuthContext';
 import './Organizations.css';
-import { apiUrl } from "../../config/api";
 
 const Organizations = () => {
   // State for organizations
@@ -90,7 +90,7 @@ const Organizations = () => {
         queryParams.append('isActive', filterActive);
       }
 
-      const response = await fetch(apiUrl(`/api/organizations?${queryParams}`), {
+      const response = await fetch(apiUrl('/api/organizations?${queryParams}'), {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -133,7 +133,7 @@ const Organizations = () => {
     setLoadingUsers(true);
 
     try {
-      const response = await fetch(apiUrl(`/api/organizations/${orgId}/users`), {
+      const response = await fetch(apiUrl('/api/organizations/${orgId}/users'), {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -243,7 +243,7 @@ const Organizations = () => {
         console.log('Creating organization with data:', formData); // Debugging
 
         // Create new organization
-        const response = await fetch('${API_BASE}/api/organizations', {
+        const response = await fetch(apiUrl("/api/organizations"), {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -251,7 +251,7 @@ const Organizations = () => {
           },
           body: JSON.stringify(formData)
         });
-
+        
         if (!response.ok) {
           const errorData = await response.json();
           throw new Error(errorData.message || 'Failed to create organization');
@@ -268,7 +268,7 @@ const Organizations = () => {
         console.log('Updating organization with data:', formData); // Debugging
 
         // Update organization
-        const response = await fetch(apiUrl(`/api/organizations/${selectedOrgId}`), {
+        const response = await fetch(apiUrl('/api/organizations/${selectedOrgId}'), {
           method: 'PUT',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -309,7 +309,7 @@ const Organizations = () => {
   // Function to handle confirm delete
   const handleConfirmDelete = async () => {
     try {
-      const response = await fetch(apiUrl(`/api/organizations/${selectedOrgId}`), {
+      const response = await fetch(apiUrl('/api/organizations/${selectedOrgId}'), {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -800,3 +800,4 @@ const Organizations = () => {
 };
 
 export default Organizations;
+

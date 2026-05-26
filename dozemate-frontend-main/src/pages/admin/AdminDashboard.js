@@ -1,6 +1,5 @@
-import { API_BASE } from "../../config/api";
+import { apiUrl } from "../../config/api";
 import React, { useEffect, useState, useRef } from "react";
-import { apiUrl } from "../../config/api"
 import {
   Box,
   Card,
@@ -126,7 +125,7 @@ const AdminDashboard = () => {
           // ✅ Case 2: OrgAdmin → fetch users of this org
           const orgId = profileData.data.organizationId._id;
           usersRes = await fetch(
-            `${API_BASE}/api/manage/users/organization/${orgId}`,
+            `apiUrl(/api/manage/users/organization/${orgId}`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
         }
@@ -156,7 +155,7 @@ const AdminDashboard = () => {
       for (const user of users) {
         try {
           const res = await fetch(
-            `${API_BASE}/api/manage/users/${user._id}`,
+            `apiUrl(/api/manage/users/${user._id}`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
           const data = await res.json();
@@ -190,7 +189,7 @@ const AdminDashboard = () => {
           const endDate = new Date();
           const startDate = new Date(endDate - 5 * 60 * 1000);
           const healthRes = await fetch(
-            `${API_BASE}/api/data/health/${device.deviceId}?start=${startDate.toISOString()}&end=${endDate.toISOString()}`,
+            `apiUrl(/api/data/health/${device.deviceId}?start=${startDate.toISOString()}&end=${endDate.toISOString()}`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
           const healthData = await healthRes.json();
@@ -756,4 +755,5 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
+
 

@@ -14,14 +14,17 @@ async function createTransporter() {
       : port === 465;
 
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT) || 465,
-      secure: true,  // 465 ke liye true hona chahiye
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT) || 465,
+  secure: true,
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+  tls: {
+    rejectUnauthorized: false  // ✅ Ye add karo
+  }
+});
 
     await transporter.verify();
     logger.info('📧 SMTP transporter ready', { host: SMTP_HOST, port, secure });
@@ -47,6 +50,7 @@ async function createTransporter() {
 async function getTransporter() {
   if (!transporterPromise) {
     transporterPromise = createTransporter().catch(err => {
+      transporterPromise = null; // ✅ Failure pe cache reset karo
       (logger.err ? logger.err : logger.error)?.(err, { where: 'initMailer' });
       throw err;
     });

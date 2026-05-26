@@ -76,7 +76,7 @@ const Header = () => {
     const img = userData?.profileImage || userData?.avatar || userData?.photoUrl;
     if (!img) return null;
     if (/^https?:\/\//i.test(img)) return img;
-    return `apiUrl(${img}`;
+    return apiUrl(`${img}`);
   };
 
   return (

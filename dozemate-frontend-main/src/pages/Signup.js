@@ -236,7 +236,7 @@ async function checkDeviceAvailability(fullId) {
       // 🔹 If exists=true but device record is missing basic fields, fetch full record
       if (exists && (!device || !device.firmwareVersion)) {
         try {
-          const dRes = await fetch(apiUrl('/api/devices/by-id/${q}'));
+          const dRes = await fetch(apiUrl(`/api/devices/by-id/${q}`));
           if (dRes.ok) {
             const dJson = await dRes.json().catch(() => ({}));
             device = dJson.device ?? dJson.data ?? device;

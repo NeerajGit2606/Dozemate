@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const createError = require("../utils/appError");
+const mongoose = require("mongoose");
 // Create a new user
 exports.createUser = async (req, res) => {
   try {
@@ -82,44 +83,43 @@ exports.createUser = async (req, res) => {
 };
 
 // Get all users with pagination, filtering and search
+
 exports.getAllUsers = async (req, res) => {
   try {
-    // Pagination
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
     const skip = (page - 1) * limit;
-    
-    // Build filter object
+
     let filter = {};
-    
-    // Filter by role if provided
+
     if (req.query.role) {
       filter.role = req.query.role;
     }
-    
-    // Filter by organization if provided
+
+    // ✅ Fix - ObjectId me convert karo
     if (req.query.organizationId) {
-      filter.organizationId = req.query.organizationId;
+      try {
+        filter.organizationId = new mongoose.Types.ObjectId(req.query.organizationId);
+      } catch (e) {
+        filter.organizationId = req.query.organizationId;
+      }
     }
-    
-    // Search by name or email
+
     if (req.query.search) {
       filter.$or = [
         { name: { $regex: req.query.search, $options: "i" } },
         { email: { $regex: req.query.search, $options: "i" } }
       ];
     }
-    
-    // Execute query with pagination
+
     const users = await User.find(filter)
       .select("-password")
       .sort({ createdAt: -1 })
       .skip(skip)
       .limit(limit);
-    
-    // Get total count for pagination
+
     const total = await User.countDocuments(filter);
-    
+
     res.status(200).json({
       status: "success",
       results: users.length,
@@ -324,40 +324,42 @@ exports.changeUserRole = async (req, res) => {
   }
 };
 
-// Get users by organization
 exports.getUsersByOrganization = async (req, res) => {
   try {
     const { organizationId } = req.params;
-    
-    // Pagination
+
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
     const skip = (page - 1) * limit;
-    
-    // Build filter for the organization
-    const filter = { 
-      organizationId,
-      role: "user" // Only return users, not admin or superadmin
+
+    // ✅ ObjectId me convert karo
+    let orgId;
+    try {
+      orgId = new mongoose.Types.ObjectId(organizationId);
+    } catch (e) {
+      orgId = organizationId;
+    }
+
+    const filter = {
+      organizationId: orgId,
+      role: { $in: ["user", "admin"] } // ✅ admin bhi include karo
     };
-    
-    // Search by name or email
+
     if (req.query.search) {
       filter.$or = [
         { name: { $regex: req.query.search, $options: "i" } },
         { email: { $regex: req.query.search, $options: "i" } }
       ];
     }
-    
-    // Execute query with pagination
+
     const users = await User.find(filter)
       .select("-password")
       .sort({ createdAt: -1 })
       .skip(skip)
       .limit(limit);
-    
-    // Get total count for pagination
+
     const total = await User.countDocuments(filter);
-    
+
     res.status(200).json({
       status: "success",
       results: users.length,

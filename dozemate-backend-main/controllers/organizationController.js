@@ -302,7 +302,7 @@ exports.getOrganizationUsers = async (req, res, next) => {
 
     // ✅ Users link via organizationId (string), not ObjectId
     const [users, total] = await Promise.all([
-      User.find({ organizationId: organization.organizationId })
+      User.find({ organizationId: organization._id })
         .select("-password")
         .skip(skip)
         .limit(limit),

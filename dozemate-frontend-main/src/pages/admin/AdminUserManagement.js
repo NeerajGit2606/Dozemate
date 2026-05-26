@@ -170,7 +170,7 @@ const AdminUserManagement = () => {
     if (!organizationId) return;
     setLoading(true);
     try {
-      const url = `apiUrl(/api/manage/users/organization/${organizationId}?page=${page + 1}&limit=${limit}`;
+      const url = apiUrl(`/api/manage/users/organization/${organizationId}?page=${page + 1}&limit=${limit}`);
       const response = await fetch(url, {
         method: 'GET',
         headers: {

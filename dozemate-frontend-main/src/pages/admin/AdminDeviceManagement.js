@@ -133,7 +133,7 @@ const AdminDeviceManagement = () => {
     setLoading(true);
     try {
       // Use the new admin-specific API endpoint
-      let url = `apiUrl(/api/devices/devices/organization/${organizationId}`;
+      let url = apiUrl(`/api/devices/devices/organization/${organizationId}`);
       
       // Build query parameters
       const queryParams = new URLSearchParams({

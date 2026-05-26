@@ -65,7 +65,7 @@ const UserProfile = () => {
   const imgSrc = previewImage || (profile?.profileImage
     ? (profile.profileImage.startsWith('http')
       ? profile.profileImage
-      : `apiUrl(${profile.profileImage}`)
+      : apiUrl(`${profile.profileImage}`))
     : undefined);
 
   const fetchUserProfile = useCallback(async () => {

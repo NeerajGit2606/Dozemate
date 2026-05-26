@@ -137,7 +137,7 @@ const MyDevices = () => {
     const handleDeleteDevice = async () => {
         if (!deviceToDelete) return;
         try {
-            const response = await fetch(apiUrl('/api/devices/remove/${deviceToDelete.id}'), {
+            const response = await fetch(apiUrl(`/api/devices/remove/${deviceToDelete.id}`), {
                 method: "DELETE",
                 headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
             });

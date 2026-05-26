@@ -478,7 +478,7 @@ const Devices = () => {
 
     setAddDeviceFetching(true);
     try {
-      const res = await fetch(apiUrl('/api/devices/details/${encodeURIComponent(id)}'), {
+      const res = await fetch(apiUrl(`/api/devices/details/${encodeURIComponent(id)}`), {
         headers: { Authorization: `Bearer ${token}` }
       });
       const json = await res.json();
@@ -527,7 +527,7 @@ const Devices = () => {
       });
 
       // Use search endpoint if searching, otherwise get all
-      let url = `apiUrl(/api/manage/devices`;
+      let url = apiUrl(`/api/manage/devices`);
       if (searchQuery) {
         url += `/search?q=${encodeURIComponent(searchQuery)}`;
       } else {
@@ -723,7 +723,7 @@ const Devices = () => {
     setFormLoading(true);
 
     try {
-      const response = await fetch(apiUrl('/api/manage/devices/${selectedDeviceId}'), {
+      const response = await fetch(apiUrl(`/api/manage/devices/${selectedDeviceId}`), {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -750,7 +750,7 @@ const Devices = () => {
   // Function to handle confirm delete (DELETE /api/manage/devices/:id)
   const handleConfirmDelete = async () => {
     try {
-      const response = await fetch(apiUrl('/api/manage/devices/${selectedDeviceId}'), {
+      const response = await fetch(apiUrl(`/api/manage/devices/${selectedDeviceId}`), {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,

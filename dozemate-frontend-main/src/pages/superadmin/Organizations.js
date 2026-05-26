@@ -90,7 +90,7 @@ const Organizations = () => {
         queryParams.append('isActive', filterActive);
       }
 
-      const response = await fetch(apiUrl('/api/organizations?${queryParams}'), {
+      const response = await fetch(apiUrl(`/api/organizations?${queryParams}`), {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -133,7 +133,7 @@ const Organizations = () => {
     setLoadingUsers(true);
 
     try {
-      const response = await fetch(apiUrl('/api/organizations/${orgId}/users'), {
+      const response = await fetch(apiUrl(`/api/organizations/${orgId}/users`), {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -268,7 +268,7 @@ const Organizations = () => {
         console.log('Updating organization with data:', formData); // Debugging
 
         // Update organization
-        const response = await fetch(apiUrl('/api/organizations/${selectedOrgId}'), {
+        const response = await fetch(apiUrl(`/api/organizations/${selectedOrgId}`), {
           method: 'PUT',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -309,7 +309,7 @@ const Organizations = () => {
   // Function to handle confirm delete
   const handleConfirmDelete = async () => {
     try {
-      const response = await fetch(apiUrl('/api/organizations/${selectedOrgId}'), {
+      const response = await fetch(apiUrl(`/api/organizations/${selectedOrgId}`), {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -471,7 +471,7 @@ const Organizations = () => {
                             <IconButton
                               color="secondary"
                               onClick={() =>
-                                openUsersDialog(org._id || org.id, org.name)
+                                openUsersDialog(org.organizationId, org.name)
                               }
                               size="small"
                             >

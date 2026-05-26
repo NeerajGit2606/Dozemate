@@ -1,4 +1,4 @@
-import { apiUrl } from  '../../config/api';
+import { apiUrl } from '../../config/api';
 import React, { useState, useEffect } from 'react';
 import {
   Box,
@@ -86,49 +86,49 @@ const UserManagement = () => {
   // Auth context
   const { token } = useAuth();
 
-  
-// ─ Units for Health Information
-const [units, setUnits] = useState({
-  weight: 'kg',   // 'kg' | 'lb'
-  height: 'cm',   // 'cm' | 'in'
-  waist: 'cm',   // 'cm' | 'in'
-});
 
-// Helpers
-const kgToLb = (kg) => kg * 2.2046226218;
-const lbToKg = (lb) => lb / 2.2046226218;
-const cmToIn = (cm) => cm / 2.54;
-const inToCm = (inch) => inch * 2.54;
-
-// Convert the existing numeric value when unit changes
-const handleUnitChange = (field, newUnit) => {
-  setUnits((prev) => {
-    const prevUnit = prev[field];
-    if (prevUnit === newUnit) return prev;
-
-    setFormData((f) => {
-      const raw = parseFloat(f[field]);
-      if (Number.isNaN(raw)) return f;
-
-      let base; // store internally in metric (kg/cm)
-      if (field === 'weight') {
-        base = prevUnit === 'kg' ? raw : lbToKg(raw);
-        return { ...f, weight: newUnit === 'kg' ? +base.toFixed(1) : +kgToLb(base).toFixed(1) };
-      }
-      if (field === 'height') {
-        base = prevUnit === 'cm' ? raw : inToCm(raw);
-        return { ...f, height: newUnit === 'cm' ? +base.toFixed(1) : +cmToIn(base).toFixed(1) };
-      }
-      if (field === 'waist') {
-        base = prevUnit === 'cm' ? raw : inToCm(raw);
-        return { ...f, waist: newUnit === 'cm' ? +base.toFixed(1) : +cmToIn(base).toFixed(1) };
-      }
-      return f;
-    });
-
-    return { ...prev, [field]: newUnit };
+  // ─ Units for Health Information
+  const [units, setUnits] = useState({
+    weight: 'kg',   // 'kg' | 'lb'
+    height: 'cm',   // 'cm' | 'in'
+    waist: 'cm',   // 'cm' | 'in'
   });
-};
+
+  // Helpers
+  const kgToLb = (kg) => kg * 2.2046226218;
+  const lbToKg = (lb) => lb / 2.2046226218;
+  const cmToIn = (cm) => cm / 2.54;
+  const inToCm = (inch) => inch * 2.54;
+
+  // Convert the existing numeric value when unit changes
+  const handleUnitChange = (field, newUnit) => {
+    setUnits((prev) => {
+      const prevUnit = prev[field];
+      if (prevUnit === newUnit) return prev;
+
+      setFormData((f) => {
+        const raw = parseFloat(f[field]);
+        if (Number.isNaN(raw)) return f;
+
+        let base; // store internally in metric (kg/cm)
+        if (field === 'weight') {
+          base = prevUnit === 'kg' ? raw : lbToKg(raw);
+          return { ...f, weight: newUnit === 'kg' ? +base.toFixed(1) : +kgToLb(base).toFixed(1) };
+        }
+        if (field === 'height') {
+          base = prevUnit === 'cm' ? raw : inToCm(raw);
+          return { ...f, height: newUnit === 'cm' ? +base.toFixed(1) : +cmToIn(base).toFixed(1) };
+        }
+        if (field === 'waist') {
+          base = prevUnit === 'cm' ? raw : inToCm(raw);
+          return { ...f, waist: newUnit === 'cm' ? +base.toFixed(1) : +cmToIn(base).toFixed(1) };
+        }
+        return f;
+      });
+
+      return { ...prev, [field]: newUnit };
+    });
+  };
 
 
   // Fetch organizations on component mount

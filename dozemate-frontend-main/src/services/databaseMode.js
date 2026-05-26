@@ -79,7 +79,7 @@ export const setupDatabaseMode = (setData, setChartData, chartRef, isAutoScrolli
       console.log(`Polling data for device ${deviceId} from ${startDate.toISOString()} to ${endDate.toISOString()}`);
 
       const healthResponse = await fetch(apiUrl(
-        `apiUrl(/api/data/health/${deviceId}?start=${startDate.toISOString()}&end=${endDate.toISOString()}`),
+        apiUrl(`/api/data/health/${deviceId}?start=${startDate.toISOString()}&end=${endDate.toISOString()}`)),
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -117,7 +117,7 @@ export const setupDatabaseMode = (setData, setChartData, chartRef, isAutoScrolli
       const startDate = new Date(endDate - 24 * 60 * 60 * 1000); // 24 hours ago
 
       const initialResponse = await fetch(apiUrl(
-        `apiUrl(/api/data/health/${deviceId}?start=${startDate.toISOString()}&end=${endDate.toISOString()}`),
+        apiUrl(`/api/data/health/${deviceId}?start=${startDate.toISOString()}&end=${endDate.toISOString()}`)),
         {
           headers: { Authorization: `Bearer ${token}` }
         }

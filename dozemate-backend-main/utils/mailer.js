@@ -14,17 +14,17 @@ async function createTransporter() {
       : port === 465;
 
     const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: Number(process.env.SMTP_PORT) || 465,
-  secure: true,
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-  tls: {
-    rejectUnauthorized: false  // ✅ Ye add karo
-  }
-});
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT) || 587,
+      secure: false,  // Brevo 587 ke liye false
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+      tls: {
+        rejectUnauthorized: false
+      }
+    });
 
     await transporter.verify();
     logger.info('📧 SMTP transporter ready', { host: SMTP_HOST, port, secure });

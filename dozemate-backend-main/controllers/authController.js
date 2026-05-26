@@ -776,7 +776,7 @@ exports.googleCallback = async (req, res, next) => {
         accountId: accountDoc.accountId,
         userId: `${accountDoc.accountId}a`,
         isDefaultProfile: true,
-        isVerified: false
+        isVerified: true
       });
 
       // link back defaultUser

@@ -12,24 +12,35 @@ export default function OAuthCallback() {
   const id = '';
 
   useEffect(() => {
+  (async () => {
+    try {
+      // Method 1: Cookie se lo
+      let token = null;
+      const match = document.cookie.match(/(^| )auth_token=([^;]+)/);
+      token = match ? match[2] : null;
 
-    (async () => {
-      try {
-
-        const match = document.cookie.match(/(^| )auth_token=([^;]+)/);
-        const token = match ? match[2] : null;
-        if (!token) throw new Error('OAuth login failed (no cookie)');
-        localStorage.setItem('token', token);  // persist for axios
-        await login(token, { role, email, id }, role);
-
-        navigate('/dashboard', { replace: true });
-
-      } catch (err) {
-        console.error('[OAuthCallback] error', err);
-        navigate('/login', { replace: true, state: { flash: err.message } });
+      // Method 2: URL params se lo (fallback)
+      if (!token) {
+        const params = new URLSearchParams(window.location.search);
+        token = params.get('token');
       }
-    })();
-  }, []);
+
+      if (!token) throw new Error('No token found');
+
+      // Token decode karo role ke liye
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      const role = payload.role || 'user';
+
+      localStorage.setItem('token', token);
+      await login(token, { role }, role);
+      navigate('/dashboard', { replace: true });
+
+    } catch (err) {
+      console.error('[OAuthCallback] error', err);
+      navigate('/login', { replace: true });
+    }
+  })();
+}, []);
 
   return <div className="loading-spinner" style={{ marginTop: 50 }}>Signing you in…</div>;
 }

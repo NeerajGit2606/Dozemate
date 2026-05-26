@@ -345,10 +345,10 @@ exports.register = async (req, res, next) => {
       elog("auth.register:link_members_error", e?.message || e);
     }
 
-        // 9.7) If Admin → create subUsers (inactive + send activation)
-    if (String(resolvedRole).toLowerCase() === "admin" 
-        && Array.isArray(req.body.subUsers) 
-        && req.body.subUsers.length) {
+    // 9.7) If Admin → create subUsers (inactive + send activation)
+    if (String(resolvedRole).toLowerCase() === "admin"
+      && Array.isArray(req.body.subUsers)
+      && req.body.subUsers.length) {
       dbg("auth.register:subUsers:create", { count: req.body.subUsers.length });
 
       for (const s of req.body.subUsers) {
@@ -799,19 +799,20 @@ exports.googleCallback = async (req, res, next) => {
     });
 
     // 4) Redirect back to frontend
-
     res.cookie("auth_token", token, {
-      httpOnly: false,     // set to true if you want it inaccessible to JS
-      secure: false,       // set true in production (https)
-      sameSite: "lax",
+      httpOnly: false,
+      secure: true,
+      sameSite: "none",
     });
-    return res.redirect(`${process.env.APP_BASE_URL}/oauth/success`);
+    return res.redirect(
+      `${process.env.APP_BASE_URL}/oauth/success?token=${token}`
+    );
 
   } catch (err) {
     next(err);
   }
 };
- 
+
 // GET /api/auth/verify/:token
 exports.verifyEmail = async (req, res, next) => {
   try {

@@ -14,13 +14,13 @@ async function createTransporter() {
       : port === 465;
 
     const transporter = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port,
-      secure,
-      auth: SMTP_USER ? { user: SMTP_USER, pass: SMTP_PASS } : undefined,
-      connectionTimeout: 15000,
-      greetingTimeout: 10000,
-      socketTimeout: 20000,
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT) || 465,
+      secure: true,  // 465 ke liye true hona chahiye
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
     });
 
     await transporter.verify();

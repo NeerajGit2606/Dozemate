@@ -1,6 +1,7 @@
 // utils/mailer.js
 const nodemailer = require('nodemailer');
 const { logger } = require('./logger');
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 let transporterPromise = null;
 
@@ -63,28 +64,41 @@ async function verifySmtp() {
   return t.verify();
 }
 
+const { Resend } = require('resend');
+
 async function sendEmail({ to, subject, text, html, from }) {
-  const t = await getTransporter();
-  const mailFrom =
-    from || process.env.FROM_EMAIL || process.env.MAIL_FROM || process.env.SMTP_USER || 'no-reply@localhost';
-
-  const info = await t.sendMail({ from: mailFrom, to, subject, text, html });
-  const ok = Array.isArray(info.accepted) && info.accepted.length > 0;
-
-  logger.info('📨 MAIL_SENT', {
-    to, subject, ok,
-    accepted: info.accepted, rejected: info.rejected,
-    response: info.response, messageId: info.messageId,
+  const mailFrom = from || 'Dozemate <onboarding@resend.dev>';
+  
+  const { data, error } = await resend.emails.send({
+    from: mailFrom,
+    to,
+    subject,
+    html: html || `<p>${text}</p>`,
   });
 
+  if (error) throw new Error(error.message);
+  
   return {
-    ok,
-    accepted: info.accepted || [],
-    rejected: info.rejected || [],
-    response: info.response,
-    messageId: info.messageId,
+    ok: true,
+    messageId: data?.id,
+    accepted: [to],
+    rejected: [],
   };
 }
+
+async function verifySmtp() {
+  return true; // Resend HTTP hai, verify ki zarurat nahi
+}
+
+async function sendNewUserCredentials(to, name, tempPassword) {
+  const first = (name || '').split(' ')[0] || 'there';
+  return sendEmail({
+    to,
+    subject: 'Your temporary Dozemate password',
+    html: `<p>Hi ${first},</p><p>Your temporary password is: <b>${tempPassword}</b></p>`,
+  });
+}
+
 
 async function sendNewUserCredentials(to, name, tempPassword) {
   const first = (name || '').split(' ')[0] || 'there';

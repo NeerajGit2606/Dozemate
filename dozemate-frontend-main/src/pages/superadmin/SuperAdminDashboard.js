@@ -191,7 +191,7 @@ const SuperAdminDashboard = () => {
 
         for (const org of orgsToFetch) {
           try {
-           const usersRes = await fetch(
+            const usersRes = await fetch(
               apiUrl(`/api/manage/users/organization/${org._id}`),
               { headers: { Authorization: `Bearer ${token}` } }
             );
@@ -229,7 +229,7 @@ const SuperAdminDashboard = () => {
 
       for (const user of allUsers) {
         try {
-          const res = await fetch( apiUrl(`/api/manage/users/${user._id}`),
+          const res = await fetch(apiUrl(`/api/manage/users/${user._id}`),
             { headers: { Authorization: `Bearer ${token}` } }
           );
           const data = await res.json();
@@ -270,9 +270,9 @@ const SuperAdminDashboard = () => {
 
         try {
           const endDate = new Date();
-          const startDate = new Date(endDate - 5 * 60 * 1000);
+          const startDate = new Date(endDate - 30 * 60 * 1000);
           const healthRes = await fetch(
-              apiUrl(`/api/data/health/${device.deviceId}?start=${startDate.toISOString()}&end=${endDate.toISOString()}`),
+            apiUrl(`/api/data/health/${device.deviceId}?start=${startDate.toISOString()}&end=${endDate.toISOString()}`),
             { headers: { Authorization: `Bearer ${token}` } }
           );
           const healthData = await healthRes.json();
@@ -997,7 +997,7 @@ const SuperAdminDashboard = () => {
                 </Box>
                 {/* ⬆️ End toggle controls */}
 
-                <Box className="superadmin-expanded-chart">
+                <Box className="superadmin-expanded-chart" sx={{ height: 300, position: 'relative' }}> 
                   <Line
                     data={userChartData[user._id] || {
                       labels: [],
@@ -1027,13 +1027,13 @@ const SuperAdminDashboard = () => {
                       ],
                     }}
                     options={getChartOptions(user._id, true)}
-                    height={350}
+                
                   />
 
                 </Box>
                 <Divider sx={{ my: 3 }} />
 
-                <Box className="superadmin-expanded-chart">
+                <Box className="superadmin-expanded-chart"     height={350}>
                   <Line
                     data={userChartData[user._id] || {
                       labels: [],
@@ -1070,7 +1070,7 @@ const SuperAdminDashboard = () => {
                 <Divider sx={{ my: 3 }} />
 
                 {/* Extra charts for Signals */}
-                <Box className="superadmin-expanded-chart">
+                <Box className="superadmin-expanded-chart" sx={{ height: 300, position: 'relative' }}>
                   <Typography variant="h6" sx={{ mb: 1 }}>
                     RR Intervals
                   </Typography>
@@ -1092,25 +1092,28 @@ const SuperAdminDashboard = () => {
                     options={{
                       responsive: true,
                       maintainAspectRatio: false,
-                      plugins: { legend: { display: true, position: "bottom" } },
+                      plugins: {
+                        legend: { display: true, position: "bottom" },
+                        datalabels: { display: false }  // ✅ ye add karo
+                      },
                       scales: {
-                        x: {
-                          title: { display: true, text: "Sample Index" },
-                        },
+                        x: { title: { display: true, text: "Sample Index" } },
                         y: {
                           title: { display: true, text: "Interval (ms)" },
+                          min: 600,
+                          max: 1000,
+                          ticks: { stepSize: 50 }
                         },
                       },
                     }}
-                    height={200}
                   />
                 </Box>
 
                 <Divider sx={{ my: 3 }} />
 
-                <Box className="superadmin-expanded-chart">
+                <Box className="superadmin-expanded-chart" sx={{ height: 200, position: 'relative' }}>
                   <Typography variant="h6" sx={{ mb: 1 }}>
-                    Raw Waveform
+                    RR Intervals
                   </Typography>
                   <Line
                     data={{
@@ -1137,10 +1140,12 @@ const SuperAdminDashboard = () => {
                         },
                         y: {
                           title: { display: true, text: "Amplitude" },
+                          min: 0,
+                          max: 0.15,
+                          ticks: { stepSize: 0.02 }
                         },
                       },
                     }}
-                    height={200}
                   />
                 </Box>
 

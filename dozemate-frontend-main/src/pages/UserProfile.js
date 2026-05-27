@@ -74,7 +74,7 @@ const UserProfile = () => {
 
     setLoading(true);
     try {
-      const response = await fetch(apiUrl(`/user/profile`), {
+      const response = await fetch(apiUrl(`/api/user/profile`), {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
       });
 
@@ -169,9 +169,9 @@ const UserProfile = () => {
 
     // 1) Try common dedicated endpoints with FormData
     const endpoints = [
-      "/user/profile/image",
-      "/user/profile/avatar",
-      "/user/profile/photo",
+      "/api/user/profile/image",
+      "/api/user/profile/avatar",
+      "/api/user/profile/photo",
       "/user/avatar",
       "/user/photo",
       "/user/picture",
@@ -225,7 +225,7 @@ const UserProfile = () => {
         { profileImageBase64: dataUrl },
       ];
       for (const payload of payloadCandidates) {
-        const res = await fetch(apiUrl(`/user/profile`), {
+        const res = await fetch(apiUrl(`/api/user/profile`), {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -327,7 +327,7 @@ const UserProfile = () => {
 
   const deleteAccount = async () => {
     try {
-      const response = await fetch(apiUrl(`/user/profile`), {
+      const response = await fetch(apiUrl(`/api/user/profile`), {
         method: "DELETE",
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
       });

@@ -187,7 +187,7 @@ const AdminDashboard = () => {
         if (!device || !device.deviceId) continue;
         try {
           const endDate = new Date();
-          const startDate = new Date(endDate - 5 * 60 * 1000);
+          const startDate = new Date(endDate - 30 * 60 * 1000);
           const healthRes = await fetch(
             apiUrl(`/api/data/health/${device.deviceId}?start=${startDate.toISOString()}&end=${endDate.toISOString()}`),
             { headers: { Authorization: `Bearer ${token}` } }

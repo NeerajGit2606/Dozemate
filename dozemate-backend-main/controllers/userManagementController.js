@@ -140,7 +140,6 @@ exports.getUserById = async (req, res) => {
     const user = await User.findById(req.params.id)
       .select("-password")
       .populate("devices")
-      .populate("activeDevice");
       
     if (!user) {
       return res.status(404).json({ 
